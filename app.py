@@ -5,16 +5,16 @@ import mysql.connector
 import re
 from dotenv import load_dotenv
 
-# ✅ Load .env file
+# Load .env file
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '.env'))
 
 app = Flask(__name__, template_folder='templates')
 app.config['UPLOAD_FOLDER'] = 'uploads'
 
-# ✅ Create uploads folder if missing
+# Create uploads folder if missing
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
-# ✅ Connect to MySQL
+# Connect to MySQL
 db = mysql.connector.connect(
     host=os.getenv("DB_HOST"),
     user=os.getenv("DB_USER"),
@@ -23,7 +23,7 @@ db = mysql.connector.connect(
 )
 cursor = db.cursor(dictionary=True)
 
-# ✅ Meet link validation
+# Meet link validation
 def is_valid_meet_link(link):
     return re.match(r'^https://meet\.google\.com/[a-z]{3}-[a-z]{4}-[a-z]{3}$', link)
 
