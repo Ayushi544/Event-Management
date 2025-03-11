@@ -40,8 +40,8 @@ source venv/bin/activate   # On macOS/Linux
 pip install -r requirements.txt
 
 4. Set up your MySQL database
-# Create a database (e.g., event_manager) and run the following SQL:
-# You can use MySQL CLI or a GUI like MySQL Workbench
+Create a database (e.g., event_manager) and run the following SQL:
+You can use MySQL CLI or a GUI like MySQL Workbench
 
 CREATE TABLE events (
   id INT AUTO_INCREMENT PRIMARY KEY,
@@ -64,7 +64,7 @@ DB_NAME=event_manager
 app.py
 
 7. Open in your browser
-# Visit: http://localhost:5000/
+Visit: http://localhost:5000/
 
 💡 Future Enhancements
 ✅ Add search & filter to events
