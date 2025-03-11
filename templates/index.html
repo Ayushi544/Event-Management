@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Event</title>
+</head>
+<body>
+    <h1>Create Event</h1>
+    <form action="/create_event" method="POST" enctype="multipart/form-data">
+        <input name="title" placeholder="Title"><br>
+        <input name="description" placeholder="Description"><br>
+        <input type="date" name="date"><br>
+        <input type="time" name="time"><br>
+        <input name="duration" placeholder="Duration"><br>
+        <input name="location" placeholder="Location"><br>
+        <input name="guests" placeholder="Emails (comma separated)"><br>
+        <input name="meet_link" placeholder="Google Meet Link"><br>
+        <input name="reminder" placeholder="Reminder"><br>
+        <input type="file" name="attachment"><br><br>
+        <button type="submit">Create Event</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Events</title>
+</head>
+<body>
+    <h1>Event List</h1>
+    <a href="/">Create New Event</a>
+    <ul>
+    {% for event in events %}
+        <li>
+            <strong>{{ event.title }}</strong> - {{ event.date }} {{ event.time }}
+            <br>Description: {{ event.description }}
+            <br>Guests: {{ event.guests }}
+            <br>Link: <a href="{{ event.meet_link }}">{{ event.meet_link }}</a>
+            {% if event.attachment %}
+                <br>Attachment: <a href="{{ url_for('uploaded_file', filename=event.attachment) }}">{{ event.attachment }}</a>
+            {% endif %}
+            <hr>
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
