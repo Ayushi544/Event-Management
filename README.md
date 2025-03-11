@@ -66,14 +66,14 @@ app.py
 7. Open in your browser
 Visit: http://localhost:5000/
 
-💡 Future Enhancements
+## 💡 Future Enhancements
 ✅ Add search & filter to events
 ✅ Pagination support
 ✅ Admin panel
 ✅ RSVP system for guests
 
-🤝 Contributing
+## 🤝 Contributing
 Contributions, suggestions, and issues are welcome!
 
-📄 License
+## 📄 License
 This project is open-source and available under the MIT License.
