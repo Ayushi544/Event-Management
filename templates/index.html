@@ -1,22 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Create Event</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: 70px auto;
+            background: white;
+            padding: 50px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 12px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        form input[type="text"],
+        form input[type="date"],
+        form input[type="time"],
+        form input[type="url"],
+        form input[type="file"],
+        form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0 16px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .checkbox {
+            margin-bottom: 20px;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .back-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Create Event</h1>
-    <form action="/create_event" method="POST" enctype="multipart/form-data">
-        <input name="title" placeholder="Title"><br>
-        <input name="description" placeholder="Description"><br>
-        <input type="date" name="date"><br>
-        <input type="time" name="time"><br>
-        <input name="duration" placeholder="Duration"><br>
-        <input name="location" placeholder="Location"><br>
-        <input name="guests" placeholder="Emails (comma separated)"><br>
-        <input name="meet_link" placeholder="Google Meet Link"><br>
-        <input name="reminder" placeholder="Reminder"><br>
-        <input type="file" name="attachment"><br><br>
-        <button type="submit">Create Event</button>
-    </form>
+    <div class="container">
+        <h2>Create New Event</h2>
+        <form action="{{ url_for('create_event') }}" method="POST" enctype="multipart/form-data">
+            <label>Title</label>
+            <input type="text" name="title" required>
+
+            <label>Description</label>
+            <textarea name="description" rows="4"></textarea>
+
+            <label>Date</label>
+            <input type="date" name="date" required>
+
+            <label>Time</label>
+            <input type="time" name="time" required>
+
+            <label>Duration</label>
+            <input type="text" name="duration" placeholder="e.g. 1 hour">
+
+            <label>Location</label>
+            <input type="text" name="location">
+
+            <label>Guest Emails (comma separated)</label>
+            <input type="text" name="guests" required>
+
+            <label>Google Meet Link</label>
+            <input type="url" name="meet_link" placeholder="https://meet.google.com/xxx-xxxx-xxx" required>
+
+            <label>Attachment</label>
+            <input type="file" name="attachment">
+
+            <label class="checkbox">
+                <input type="checkbox" name="reminder"> Set Reminder
+            </label>
+
+            <button type="submit">Create Event</button>
+        </form>
+        <div class="back-link">
+            <p>View <a href="{{ url_for('view_events') }}">All Events</a></p>
+        </div>
+    </div>
 </body>
 </html>
