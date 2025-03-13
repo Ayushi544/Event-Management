@@ -1,24 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>All Events</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .event {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            background: #f9f9f9;
+        }
+
+        .event h3 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .event p {
+            margin: 6px 0;
+            color: #444;
+        }
+
+        .event a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .event a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-link {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .nav-link a {
+            color: #007bff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-link a:hover {
+            text-decoration: underline;
+        }
+
+        .no-events {
+            text-align: center;
+            font-style: italic;
+            color: #999;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Event List</h1>
-    <a href="/">Create New Event</a>
-    <ul>
-    {% for event in events %}
-        <li>
-            <strong>{{ event.title }}</strong> - {{ event.date }} {{ event.time }}
-            <br>Description: {{ event.description }}
-            <br>Guests: {{ event.guests }}
-            <br>Link: <a href="{{ event.meet_link }}">{{ event.meet_link }}</a>
-            {% if event.attachment %}
-                <br>Attachment: <a href="{{ url_for('uploaded_file', filename=event.attachment) }}">{{ event.attachment }}</a>
-            {% endif %}
-            <hr>
-        </li>
-    {% endfor %}
-    </ul>
+    <div class="container">
+        <h2>All Events</h2>
+        <div class="nav-link">
+            <a href="{{ url_for('index') }}">➕ Create New Event</a>
+        </div>
+
+        {% if events %}
+            {% for event in events %}
+                <div class="event">
+                    <h3>{{ event.title }}</h3>
+                    <p><strong>Description:</strong> {{ event.description or 'N/A' }}</p>
+                    <p><strong>Date:</strong> {{ event.date }} | <strong>Time:</strong> {{ event.time }}</p>
+                    <p><strong>Duration:</strong> {{ event.duration or 'N/A' }}</p>
+                    <p><strong>Location:</strong> {{ event.location or 'Online' }}</p>
+                    <p><strong>Guests:</strong> {{ event.guests }}</p>
+                    <p><strong>Google Meet:</strong> <a href="{{ event.meet_link }}" target="_blank">{{ event.meet_link }}</a></p>
+                    <p><strong>Reminder:</strong> {{ 'Yes' if event.reminder else 'No' }}</p>
+                    {% if event.attachment %}
+                        <p><strong>Attachment:</strong> <a href="{{ url_for('uploaded_file', filename=event.attachment) }}">Download</a></p>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        {% else %}
+            <p class="no-events">No events created yet.</p>
+        {% endif %}
+    </div>
 </body>
 </html>
