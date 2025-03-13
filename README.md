@@ -64,7 +64,7 @@ DB_NAME=event_manager
 app.py
 
 7. Open in your browser
-Visit: http://localhost:5000/
+Visit: http://127.0.0.1:5000
 
 ## 💡 Future Enhancements
 ✅ Add search & filter to events
