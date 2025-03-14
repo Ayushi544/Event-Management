@@ -43,12 +43,10 @@ PythonAnywhere
 For MySQL version, use Render with ClearDB MySQL or Railway.app
 
 ## Screenshots
-JSON based interactive web UI
 ![image](https://github.com/user-attachments/assets/25c9e05c-b12e-4ed6-aaca-812b019f533d)
 ![image](https://github.com/user-attachments/assets/d99b0a0d-0769-4411-9252-ab935c013e30)
-Database based interactive web UI
-![image](https://github.com/user-attachments/assets/73578e91-0468-4184-b528-3f3b7848573e)
-![image](https://github.com/user-attachments/assets/685512cc-9d71-4800-8efb-d9f6c2cf60d6)
+![image](https://github.com/user-attachments/assets/c9b29c68-abf9-4903-9994-66270f0fbaee)
+
 
 ## ✨ Future Improvements
 Add authentication (admin panel)
