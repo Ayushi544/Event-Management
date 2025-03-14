@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Events</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f0f2f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 50px auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .event-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .event-card h3 {
+            margin-top: 0;
+            color: #007bff;
+        }
+
+        .event-card p {
+            margin: 8px 0;
+        }
+
+        .attachment {
+            margin-top: 10px;
+        }
+
+        .attachment a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .attachment a:hover {
+            text-decoration: underline;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .back-link a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>All Events</h2>
+
+        {% if events %}
+            {% for event in events %}
+                <div class="event-card">
+                    <h3>{{ event.title }}</h3>
+                    <p><strong>Date:</strong> {{ event.date }}</p>
+                    <p><strong>Time:</strong> {{ event.time }}</p>
+                    <p><strong>Duration:</strong> {{ event.duration or 'N/A' }}</p>
+                    <p><strong>Location:</strong> {{ event.location or 'Online' }}</p>
+                    <p><strong>Description:</strong> {{ event.description or 'No description' }}</p>
+                    <p><strong>Guests:</strong> {{ event.guests }}</p>
+                    <p><strong>Meet Link:</strong> <a href="{{ event.meet_link }}" target="_blank">{{ event.meet_link }}</a></p>
+                    <p><strong>Reminder:</strong> {{ 'Yes' if event.reminder else 'No' }}</p>
+
+                    {% if event.attachment %}
+                        <div class="attachment">
+                            📎 <a href="{{ url_for('static', filename='attachments/' + event.attachment) }}" target="_blank">View Attachment</a>
+                        </div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        {% else %}
+            <p style="text-align:center;">No events found.</p>
+        {% endif %}
+
+        <div class="back-link">
+            <a href="{{ url_for('create_event') }}">+ Create New Event</a>
+        </div>
+    </div>
+</body>
+</html>

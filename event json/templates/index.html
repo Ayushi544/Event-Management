@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>📅 All Events</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #e0eafc, #cfdef3);
+            margin: 0;
+            padding: 2rem;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .top-buttons {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .top-buttons a {
+            text-decoration: none;
+            color: #fff;
+            background: #2980b9;
+            padding: 10px 20px;
+            border-radius: 6px;
+            margin: 0 10px;
+            display: inline-block;
+            transition: 0.3s ease;
+        }
+        .top-buttons a:hover {
+            background: #1c5980;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        li {
+            background: #ffffff;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-left: 6px solid #3498db;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        strong {
+            font-size: 1.4rem;
+            color: #2c3e50;
+        }
+        em {
+            color: #7f8c8d;
+        }
+        b {
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <h1>📅 All Upcoming Events</h1>
+
+    <div class="top-buttons">
+        <a href="/create_event">+ Create New Event</a>
+        <a href="/download_csv">⬇️ Download CSV</a>
+    </div>
+
+    <ul>
+        {% for event in events %}
+        <li>
+            <strong>{{ event.event_name }}</strong> <em>({{ event.event_type }})</em><br>
+            <b>Date:</b> {{ event.start_time }}<br>
+            <b>Duration:</b> {{ event.duration_minutes }} minutes<br>
+            <b>Status:</b> {{ event.status }}<br>
+            <b>Guests:</b> {{ event.guest_emails | join(', ') }}<br>
+            <b>Agenda:</b> {{ event.agenda }}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

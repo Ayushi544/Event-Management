@@ -1,0 +1,27 @@
+[
+  {
+    "event_id": "E001",
+    "event_name": "Webinar on Natural Language Processing",
+    "event_type": "Tech",
+    "start_time": "2025-03-20T12:48",
+    "duration_minutes": 60,
+    "status": "Cancelled",
+    "guest_emails": [
+      "satya@microsoft.com"
+    ],
+    "agenda": "cancelled"
+  },
+  {
+    "event_id": "E002",
+    "event_name": "Yoga Benefits for youth",
+    "event_type": "Health",
+    "start_time": "2025-03-14T13:07",
+    "duration_minutes": 35,
+    "status": "Scheduled",
+    "guest_emails": [
+      "satya@microsoft.com",
+      "john@abc.com"
+    ],
+    "agenda": "practice"
+  }
+]

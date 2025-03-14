@@ -1,0 +1,3 @@
+event_id,event_name,event_type,start_time,duration_minutes,status,guest_emails,agenda
+E001,Webinar on Natural Language Processing,Tech,2025-03-20T12:48,60,Cancelled,['satya@microsoft.com'],cancelled
+E002,Yoga Benefits for youth,Health,2025-03-14T13:07,35,Scheduled,"['satya@microsoft.com', 'john@abc.com']",practice

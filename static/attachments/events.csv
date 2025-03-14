@@ -1,0 +1,2 @@
+event_id,event_name,event_type,start_time,duration_minutes,status,guest_emails,agenda
+E001,How to be productive,Professional,2025-03-13T21:21,15,Scheduled,"['satya@microsoft.com', 'john@abc.com']",To save time and maximize your potential.

@@ -1,0 +1,253 @@
+[
+    {
+      "event_id": 1,
+      "event_name": "AI Product Launch",
+      "event_type": "Tech",
+      "start_time": "2025-03-20T14:00:00",
+      "duration_minutes": 90,
+      "status": "upcoming",
+      "guest_emails": ["elon@tesla.com", "satya@microsoft.com"],
+      "agenda": "Launch of the latest AI product line and panel discussion."
+    },
+    {
+      "event_id": 2,
+      "event_name": "Marketing Strategy Meet",
+      "event_type": "Business",
+      "start_time": "2025-03-18T10:00:00",
+      "duration_minutes": 60,
+      "status": "completed",
+      "guest_emails": ["john@abc.com", "jane@xyz.com"],
+      "agenda": "Quarterly marketing strategy meeting."
+    },
+    {
+      "event_id": 3,
+      "event_name": "Yoga & Wellness Workshop",
+      "event_type": "Health",
+      "start_time": "2025-03-25T08:00:00",
+      "duration_minutes": 120,
+      "status": "upcoming",
+      "guest_emails": ["wellness@fitlife.com", "peace@yoga.com"],
+      "agenda": "Guided yoga session and wellness talk."
+    },
+    {
+      "event_id": 4,
+      "event_name": "Resume Building Session",
+      "event_type": "Education",
+      "start_time": "2025-03-16T17:30:00",
+      "duration_minutes": 45,
+      "status": "completed",
+      "guest_emails": ["career@help.com"],
+      "agenda": "Session on building an industry-ready resume."
+    },
+    {
+      "event_id": 5,
+      "event_name": "Data Science Meetup",
+      "event_type": "Tech",
+      "start_time": "2025-03-22T16:00:00",
+      "duration_minutes": 90,
+      "status": "upcoming",
+      "guest_emails": ["ml@analytics.com", "data@nerds.com"],
+      "agenda": "Talks and networking on machine learning."
+    },
+    {
+      "event_id": 6,
+      "event_name": "Budget Planning Workshop",
+      "event_type": "Finance",
+      "start_time": "2025-03-15T11:00:00",
+      "duration_minutes": 60,
+      "status": "completed",
+      "guest_emails": ["money@smart.com"],
+      "agenda": "Workshop on personal and business budgeting."
+    },
+    {
+      "event_id": 7,
+      "event_name": "Photography Contest",
+      "event_type": "Creative",
+      "start_time": "2025-03-28T13:00:00",
+      "duration_minutes": 120,
+      "status": "upcoming",
+      "guest_emails": ["lens@photo.com"],
+      "agenda": "Photography showcase and judging."
+    },
+    {
+      "event_id": 8,
+      "event_name": "Environmental Talk",
+      "event_type": "Awareness",
+      "start_time": "2025-03-26T09:00:00",
+      "duration_minutes": 60,
+      "status": "upcoming",
+      "guest_emails": ["green@earth.org"],
+      "agenda": "Discussion on sustainability and green energy."
+    },
+    {
+      "event_id": 9,
+      "event_name": "Blockchain Seminar",
+      "event_type": "Tech",
+      "start_time": "2025-03-21T15:00:00",
+      "duration_minutes": 90,
+      "status": "completed",
+      "guest_emails": ["crypto@block.com", "dev@web3.com"],
+      "agenda": "Understanding smart contracts and DeFi."
+    },
+    {
+      "event_id": 10,
+      "event_name": "Stress Management Session",
+      "event_type": "Health",
+      "start_time": "2025-03-19T10:30:00",
+      "duration_minutes": 45,
+      "status": "completed",
+      "guest_emails": ["peace@mind.com"],
+      "agenda": "Mindfulness and meditation techniques."
+    },
+    {
+      "event_id": 11,
+      "event_name": "Startup Pitch Day",
+      "event_type": "Business",
+      "start_time": "2025-03-29T11:00:00",
+      "duration_minutes": 120,
+      "status": "upcoming",
+      "guest_emails": ["founder@startup.com", "vc@invest.com"],
+      "agenda": "Startups pitch to potential investors."
+    },
+    {
+      "event_id": 12,
+      "event_name": "Python Bootcamp",
+      "event_type": "Education",
+      "start_time": "2025-03-23T09:00:00",
+      "duration_minutes": 180,
+      "status": "upcoming",
+      "guest_emails": ["code@python.org"],
+      "agenda": "Hands-on Python training for beginners."
+    },
+    {
+      "event_id": 13,
+      "event_name": "Community Clean-Up Drive",
+      "event_type": "Social",
+      "start_time": "2025-03-27T07:30:00",
+      "duration_minutes": 90,
+      "status": "upcoming",
+      "guest_emails": ["volunteer@cleanup.org"],
+      "agenda": "Join hands to clean the local neighborhood."
+    },
+    {
+      "event_id": 14,
+      "event_name": "Ethical Hacking Webinar",
+      "event_type": "Tech",
+      "start_time": "2025-03-17T18:00:00",
+      "duration_minutes": 60,
+      "status": "completed",
+      "guest_emails": ["security@hackers.com"],
+      "agenda": "Basics of ethical hacking and tools demo."
+    },
+    {
+      "event_id": 15,
+      "event_name": "Digital Marketing Masterclass",
+      "event_type": "Business",
+      "start_time": "2025-03-30T15:30:00",
+      "duration_minutes": 90,
+      "status": "upcoming",
+      "guest_emails": ["ads@market.com"],
+      "agenda": "Strategies for digital ad campaigns and SEO."
+    },
+    {
+      "event_id": 16,
+      "event_name": "Book Club Meetup",
+      "event_type": "Social",
+      "start_time": "2025-03-24T17:00:00",
+      "duration_minutes": 60,
+      "status": "upcoming",
+      "guest_emails": ["readers@bookshelf.com"],
+      "agenda": "Discussing 'Atomic Habits' by James Clear."
+    },
+    {
+      "event_id": 17,
+      "event_name": "Cybersecurity 101",
+      "event_type": "Tech",
+      "start_time": "2025-03-20T13:00:00",
+      "duration_minutes": 90,
+      "status": "completed",
+      "guest_emails": ["secure@network.com"],
+      "agenda": "Intro to threats, vulnerabilities, and protection."
+    },
+    {
+      "event_id": 18,
+      "event_name": "Women in Tech Panel",
+      "event_type": "Social",
+      "start_time": "2025-03-31T10:00:00",
+      "duration_minutes": 90,
+      "status": "upcoming",
+      "guest_emails": ["empower@women.com"],
+      "agenda": "Celebrating women leaders in technology."
+    },
+    {
+      "event_id": 19,
+      "event_name": "Investment Planning Talk",
+      "event_type": "Finance",
+      "start_time": "2025-03-19T19:00:00",
+      "duration_minutes": 60,
+      "status": "completed",
+      "guest_emails": ["money@safe.com"],
+      "agenda": "Stocks, mutual funds, and risk management."
+    },
+    {
+      "event_id": 20,
+      "event_name": "Mental Health Awareness",
+      "event_type": "Health",
+      "start_time": "2025-03-18T12:00:00",
+      "duration_minutes": 60,
+      "status": "completed",
+      "guest_emails": ["care@mental.com"],
+      "agenda": "Break the stigma around mental health."
+    },
+    {
+      "event_id": 21,
+      "event_name": "Graphic Design Workshop",
+      "event_type": "Creative",
+      "start_time": "2025-03-20T14:30:00",
+      "duration_minutes": 90,
+      "status": "upcoming",
+      "guest_emails": ["design@creatives.com"],
+      "agenda": "Figma and Photoshop crash course."
+    },
+    {
+      "event_id": 22,
+      "event_name": "Job Fair 2025",
+      "event_type": "Career",
+      "start_time": "2025-04-02T10:00:00",
+      "duration_minutes": 240,
+      "status": "upcoming",
+      "guest_emails": ["hr@careers.com"],
+      "agenda": "Meet recruiters from top MNCs and startups."
+    },
+    {
+      "event_id": 23,
+      "event_name": "Startup Legal 101",
+      "event_type": "Business",
+      "start_time": "2025-03-21T11:00:00",
+      "duration_minutes": 75,
+      "status": "completed",
+      "guest_emails": ["law@startup.com"],
+      "agenda": "Understanding company formation and IP rights."
+    },
+    {
+      "event_id": 24,
+      "event_name": "College Fest Planning",
+      "event_type": "Education",
+      "start_time": "2025-03-22T18:00:00",
+      "duration_minutes": 60,
+      "status": "upcoming",
+      "guest_emails": ["organizer@college.com"],
+      "agenda": "Meeting to plan performances and logistics."
+    },
+    {
+      "event_id": 25,
+      "event_name": "Self Defense Training",
+      "event_type": "Health",
+      "start_time": "2025-03-28T09:00:00",
+      "duration_minutes": 90,
+      "status": "upcoming",
+      "guest_emails": ["safety@aware.com"],
+      "agenda": "Basic self-defense moves and awareness tips."
+    }
+  ]
+  
